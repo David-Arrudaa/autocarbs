@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oficina Mecânica Especializada em VW e Audi em Tatuí-SP. 8 anos de experiência, diagnóstico avançado, revisão e manutenção para nacionais e importados."
+    />
+    <meta
+      name="keywords"
+      content="mecânica tatuí, oficina vw audi, autocar bs, revisão, manutenção importados, câmbio dsg, motor tsi"
+    />
+    <meta name="author" content="AUTOCAR BS" />
+    <meta name="theme-color" content="#0f0f0f" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>"
+    />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="AUTOCAR BS | Especialista VW e Audi em Tatuí"
+    />
+    <meta
+      property="og:description"
+      content="Sua máquina merece expertise real. Diagnóstico e manutenção de alta performance."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200"
+    />
+
+    <title>AUTOCAR BS | Especialista VW e Audi</title>
+
+    <!-- JSON-LD SEO Schema (Para Negócios Locais) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "AUTOCAR BS",
+        "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e",
+        "description": "Oficina mecânica especializada em VW e Audi, atendendo também nacionais e importados com diagnóstico avançado.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua 15 de Novembro, 2569",
+          "addressLocality": "Tatuí",
+          "addressRegion": "SP",
+          "postalCode": "18270-000",
+          "addressCountry": "BR"
+        },
+        "telephone": "+5515996661359",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "07:00",
+            "closes": "11:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "13:30",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "$$"
+      }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração de Cores Personalizadas -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                black: "#0f0f0f",
+                red: "#E31E24",
+                darkred: "#b91c1c",
+                gray: "#1a1a1a",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Exo 2", "sans-serif"],
+            },
+            animation: {
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+              "bounce-slow": "bounce 3s infinite",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ícones (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+      html {
+        scroll-padding-top: 6rem;
+      }
+      .clip-path-hero {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      }
+      .logo-filter {
+        filter: brightness(0) invert(1);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+      }
+      .logo-filter:hover {
+        opacity: 1;
+        filter: brightness(0) invert(1)
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+      }
+
+      /* Classes para animação de scroll (Scroll Reveal) */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-brand-black text-gray-100 font-sans antialiased relative">
+    <!-- Navbar Fixa -->
+    <nav
+      class="fixed w-full z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 transition-all duration-300 h-20"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex items-center justify-between h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center gap-1 cursor-pointer">
+            <div class="flex flex-col leading-none">
+              <div
+                class="flex items-baseline italic font-display font-black tracking-tighter text-3xl"
+              >
+                <span class="text-white mr-1">AUTOCAR</span>
+                <span class="text-brand-red">BS</span>
+              </div>
+              <div class="h-0.5 w-full bg-white mt-0.5 rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                >Início</a
+              >
+              <a
+                href="#especialidade"
+                class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                >Especialidade</a
+              >
+              <a
+                href="#servicos"
+                class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                >Serviços</a
+              >
+              <!-- Novo Item no Menu -->
+              <a
+                href="#dicas"
+                class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                >Dicas</a
+              >
+              <a
+                href="#depoimentos"
+                class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                >Depoimentos</a
+              >
+
+              <!-- Botão Nav Atualizado: Estilo "Ghost" (Outline), mais técnico e elegante -->
+              <a
+                href="#contato"
+                class="border border-brand-red text-brand-red hover:bg-brand-red hover:text-white transition-all duration-300 px-6 py-2 rounded text-sm font-bold uppercase tracking-wider"
+              >
+                Agendar
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              onclick="toggleMenu()"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+            >
+              <i class="ph ph-list text-3xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="hidden md:hidden bg-brand-gray border-b border-white/10"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Início</a
+          >
+          <a
+            href="#especialidade"
+            onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Especialidade VW & Audi</a
+          >
+          <a
+            href="#servicos"
+            onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Serviços</a
+          >
+          <a
+            href="#dicas"
+            onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Dicas</a
+          >
+          <a
+            href="#depoimentos"
+            onclick="toggleMenu()"
+            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Depoimentos</a
+          >
+          <a
+            href="#contato"
+            onclick="toggleMenu()"
+            class="text-brand-red font-bold block px-3 py-2 rounded-md text-base"
+            >Agendar Visita</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-[85vh] flex flex-col justify-center pt-32 pb-12 overflow-hidden clip-path-hero"
+    >
+      <!-- Background -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop"
+          alt="Motor Audi Performance"
+          class="w-full h-full object-cover opacity-60"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left w-full"
+      >
+        <div class="max-w-2xl animate-fade-in-up">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-red animate-pulse"
+            ></span>
+            <span
+              class="text-xs font-semibold tracking-wider uppercase text-gray-200"
+              >8 Anos de Excelência em Tatuí</span
+            >
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-display font-black text-white leading-tight mb-6 drop-shadow-lg"
+          >
+            Manutenção de <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-400"
+              >Alta Performance</span
+            >
+          </h1>
+
+          <p
+            class="text-lg text-gray-300 mb-8 font-light leading-relaxed max-w-lg drop-shadow-md"
+          >
+            Diagnóstico preciso e manutenção completa para veículos nacionais e
+            importados. Especialistas em engenharia alemã (VW e Audi).
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <!-- Link direto para o WhatsApp -->
+            <a
+              href="https://wa.me/5515996661359?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Autocar%20BS%20e%20gostaria%20de%20um%20or%C3%A7amento."
+              target="_blank"
+              class="flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-darkred text-white px-8 py-4 rounded font-bold text-lg transition-all hover:-translate-y-1 shadow-lg shadow-red-600/30"
+            >
+              <i class="ph-bold ph-whatsapp-logo"></i>
+              Orçamento Rápido
+            </a>
+            <a
+              href="#especialidade"
+              class="flex items-center justify-center gap-2 px-8 py-4 rounded border border-white/30 hover:bg-white/10 text-white font-semibold transition-all"
+            >
+              Nossa Expertise
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-12 border-b border-white/5 bg-brand-gray/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <p
+          class="text-center text-gray-500 text-sm font-semibold uppercase tracking-widest mb-8"
+        >
+          Expertise Técnica Comprovada
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-20"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg"
+            alt="Audi"
+            class="h-10 md:h-14 w-auto logo-filter"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg"
+            alt="Volkswagen"
+            class="h-12 md:h-16 w-auto logo-filter"
+          />
+          <div class="h-10 w-px bg-white/10 hidden md:block"></div>
+          <div
+            class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default"
+          >
+            <i
+              class="ph-fill ph-car-profile text-3xl md:text-4xl text-gray-300"
+            ></i>
+            <span
+              class="text-xl md:text-2xl font-bold text-gray-300 font-sans tracking-tight"
+              >Multimarcas</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Especialidade -->
+    <section id="especialidade" class="py-24 bg-brand-black relative">
+      <div
+        class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-red/5 to-transparent pointer-events-none"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative group reveal">
+            <!-- Efeito de fundo vermelho brilhante -->
+            <div
+              class="absolute -inset-4 bg-brand-red/20 rounded-xl blur-lg group-hover:bg-brand-red/30 transition-all duration-500"
+            ></div>
+
+            <!-- IMAGEM DE ESPECIALIDADE -->
+            <!-- DICA: Substitua este link pela SUA foto trabalhando no motor (a que tem a legenda sobre Sucesso) -->
+            <img
+              src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1000&auto=format&fit=crop"
+              alt="Especialista Autocar BS trabalhando no motor"
+              class="relative rounded-lg shadow-2xl border border-white/10 w-full object-cover h-[500px] grayscale hover:grayscale-0 transition-all duration-700"
+            />
+
+            <!-- Badge Flutuante -->
+            <div
+              class="absolute bottom-8 -right-4 md:-right-8 bg-brand-gray p-6 rounded-lg border border-white/10 shadow-xl max-w-xs"
+            >
+              <div class="flex items-center gap-4 mb-2">
+                <i class="ph-fill ph-certificate text-3xl text-brand-red"></i>
+                <span class="font-bold text-white text-lg"
+                  >8 Anos de História</span
+                >
+              </div>
+              <p class="text-gray-400 text-sm">
+                Equipamentos homologados e equipe em constante atualização.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal delay-100">
+            <h2
+              class="text-brand-red font-bold tracking-wider uppercase text-sm mb-2"
+            >
+              Diferencial Técnico
+            </h2>
+            <h3
+              class="text-3xl md:text-4xl font-display font-bold text-white mb-6"
+            >
+              Especialistas em
+              <span class="text-brand-red">Engenharia Alemã</span>, prontos para
+              qualquer desafio.
+            </h3>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Há <strong>8 anos no mercado</strong>, a AUTOCAR BS se destaca por
+              oferecer um serviço de concessionária com a proximidade de uma
+              oficina de confiança. Atendemos com excelência desde a frota
+              <strong>nacional</strong> até veículos
+              <strong>importados</strong> de alta complexidade.
+            </p>
+            <p class="text-gray-400 mb-8 leading-relaxed">
+              Nossa especialização na linha VAG (VW e Audi) nos permite
+              diagnosticar problemas que outros não encontram, utilizando
+              scanners avançados e seguindo rigorosamente as especificações de
+              fábrica (OEM).
+            </p>
+
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl"></i>
+                <span class="text-gray-200"
+                  >Manutenção Preventiva e Corretiva Especializada</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl"></i>
+                <span class="text-gray-200"
+                  >Tecnologia para Nacionais e Importados</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl"></i>
+                <span class="text-gray-200"
+                  >Transparência e Peças de 1ª Linha</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 bg-brand-gray/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <h2
+            class="text-3xl md:text-4xl font-display font-bold text-white mb-4"
+          >
+            Soluções Automotivas Completas
+          </h2>
+          <p class="text-gray-400">
+            Do preventivo ao corretivo, garantimos a segurança e a valorização
+            do seu patrimônio nacional ou importado.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Cards de Serviço (6 itens) -->
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-engine text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Mecânica Geral e Motores
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Retífica, ajustes de sincronismo e manutenção corretiva pesada
+              para motores aspirados e turbo.
+            </p>
+          </div>
+
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal delay-100"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-drop text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Preventiva e Lubrificação
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Revisões programadas com óleos homologados (normas VW
+              508.88/502.00) para garantir longevidade.
+            </p>
+          </div>
+
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal delay-200"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-warning-octagon text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Segurança e Freios
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Manutenção de sistemas ABS/EBD, pastilhas, discos e suspensão.
+              Revisão de geometria.
+            </p>
+          </div>
+
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-desktop-tower text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Diagnóstico Eletrônico
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Varredura de módulos, calibração de sensores, reset de serviços e
+              análise de falhas.
+            </p>
+          </div>
+
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal delay-100"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-thermometer-cold text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Arrefecimento</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Limpeza técnica, troca de aditivos e bomba d'água. Evite
+              superaquecimento.
+            </p>
+          </div>
+
+          <div
+            class="bg-brand-black p-8 rounded-xl border border-white/5 hover:border-brand-red/50 transition-all duration-300 group hover:-translate-y-2 reveal delay-200"
+          >
+            <div
+              class="w-14 h-14 rounded bg-brand-red/10 flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors"
+            >
+              <i
+                class="ph-fill ph-gear text-3xl text-brand-red group-hover:text-white"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              Transmissão (Câmbio)
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Especialistas em DSG/S-Tronic. Troca de fluido por diálise e
+              calibração.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Dicas do Especialista -->
+    <section id="dicas" class="py-24 bg-brand-black relative">
+      <!-- Elemento decorativo -->
+      <div
+        class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-brand-red/5 to-transparent pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <div
+          class="flex items-center justify-between mb-12 flex-col md:flex-row gap-4"
+        >
+          <div>
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white">
+              Dicas de Ouro
+            </h2>
+            <p
+              class="text-brand-red text-sm font-bold uppercase tracking-widest mt-2"
+            >
+              Cuide do seu Carro
+            </p>
+          </div>
+          <div
+            class="h-px w-full md:w-auto flex-grow bg-white/10 mx-8 hidden md:block"
+          ></div>
+          <i class="ph-fill ph-lightbulb text-4xl text-brand-red"></i>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Dica 1 -->
+          <div
+            class="bg-brand-gray/50 p-8 rounded-xl border-l-4 border-brand-red hover:bg-brand-gray transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-brand-black flex items-center justify-center text-brand-red"
+              >
+                <i class="ph-fill ph-drop text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                Troca de Óleo Vencida
+              </h3>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Não espere o óleo virar "borra". O óleo lubrifica e limpa o motor.
+              Atrasar a troca aumenta o consumo de combustível e pode fundir o
+              motor. Respeite sempre a quilometragem ou o tempo (6 meses/1 ano).
+            </p>
+          </div>
+
+          <!-- Dica 2 -->
+          <div
+            class="bg-brand-gray/50 p-8 rounded-xl border-l-4 border-brand-red hover:bg-brand-gray transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-brand-black flex items-center justify-center text-brand-red"
+              >
+                <i class="ph-fill ph-thermometer text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                Água de Torneira? Jamais!
+              </h3>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Nunca complete o radiador com água da torneira. O cloro corrói as
+              peças internas e causa vazamentos. Use sempre aditivo orgânico na
+              proporção correta para evitar que o carro "ferva".
+            </p>
+          </div>
+
+          <!-- Dica 3 -->
+          <div
+            class="bg-brand-gray/50 p-8 rounded-xl border-l-4 border-brand-red hover:bg-brand-gray transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-brand-black flex items-center justify-center text-brand-red"
+              >
+                <i class="ph-fill ph-warning-octagon text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Ouviu um chiado?</h3>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Barulho metálico ao pisar no freio geralmente indica que as
+              pastilhas acabaram e estão "comendo" o disco. Não ignore barulhos
+              na suspensão ou freios, sua segurança depende disso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos (Prova Social) -->
+    <section
+      id="depoimentos"
+      class="py-24 bg-brand-gray/30 border-t border-white/5"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <h2
+          class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center"
+        >
+          O que nossos clientes dizem
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div
+            class="bg-brand-black p-6 rounded-lg border border-white/5 flex flex-col h-full hover:border-brand-red/30 transition-colors reveal"
+          >
+            <div class="flex text-yellow-400 mb-4 text-sm">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-6 flex-grow italic">
+              "Excelente, em todos os aspectos. Competência, bom atendimento,
+              oficina limpa. Parabéns."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+              <div
+                class="w-10 h-10 rounded-full bg-brand-red/20 flex items-center justify-center font-bold text-brand-red border border-brand-red/20"
+              >
+                RO
+              </div>
+              <div>
+                <p class="text-white font-bold text-sm">
+                  Roger dos Reis Oliveira
+                </p>
+                <p class="text-gray-500 text-xs">Local Guide</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div
+            class="bg-brand-black p-6 rounded-lg border border-white/5 flex flex-col h-full hover:border-brand-red/30 transition-colors reveal delay-100"
+          >
+            <div class="flex text-yellow-400 mb-4 text-sm">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-6 flex-grow italic">
+              "Recomendo, bom atendimento, honesto, melhor preço da cidade,
+              melhor qualidade nos serviços."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+              <div
+                class="w-10 h-10 rounded-full bg-brand-red/20 flex items-center justify-center font-bold text-brand-red border border-brand-red/20"
+              >
+                DB
+              </div>
+              <div>
+                <p class="text-white font-bold text-sm">Dener Bueno</p>
+                <p class="text-gray-500 text-xs">Cliente Satisfeito</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div
+            class="bg-brand-black p-6 rounded-lg border border-white/5 flex flex-col h-full hover:border-brand-red/30 transition-colors reveal delay-200"
+          >
+            <div class="flex text-yellow-400 mb-4 text-sm">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+              ><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-gray-300 text-sm mb-6 flex-grow italic">
+              "Atendimento e serviço de alta qualidade! Recomendo!"
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+              <div
+                class="w-10 h-10 rounded-full bg-brand-red/20 flex items-center justify-center font-bold text-brand-red border border-brand-red/20"
+              >
+                BC
+              </div>
+              <div>
+                <p class="text-white font-bold text-sm">Bianca Camargo</p>
+                <p class="text-gray-500 text-xs">Cliente Satisfeita</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+          <a
+            href="https://www.google.com/search?q=autocar+bs+tatu%C3%AD#lrd=0x94c5eae33633e08f:0x6f06a096c421714b,1,,,"
+            target="_blank"
+            class="inline-flex items-center gap-2 text-brand-red hover:text-white transition-colors font-medium border border-brand-red/30 px-6 py-3 rounded-full hover:bg-brand-red"
+          >
+            <i class="ph-bold ph-google-logo"></i>
+            Ver todas as 27 avaliações no Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-brand-black border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-display font-bold text-white mb-10 text-center reveal"
+        >
+          Dúvidas Frequentes
+        </h2>
+
+        <div class="space-y-4 reveal">
+          <!-- FAQ 1 -->
+          <div
+            class="bg-brand-gray/30 border border-white/10 rounded-lg overflow-hidden"
+          >
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+              onclick="toggleFaq(this)"
+            >
+              <span class="font-bold text-gray-200"
+                >Vocês atendem apenas VW e Audi?</span
+              >
+              <i
+                class="ph-bold ph-caret-down text-brand-red transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-2"
+            >
+              Não! Embora sejamos especialistas e referência em engenharia alemã
+              (Linha VAG), nossa equipe e equipamentos estão preparados para
+              realizar manutenção de excelência em veículos nacionais e
+              importados de todas as marcas.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div
+            class="bg-brand-gray/30 border border-white/10 rounded-lg overflow-hidden"
+          >
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+              onclick="toggleFaq(this)"
+            >
+              <span class="font-bold text-gray-200"
+                >É necessário agendar horário?</span
+              >
+              <i
+                class="ph-bold ph-caret-down text-brand-red transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-2"
+            >
+              Sim. Para garantir a qualidade técnica e a dedicação total ao seu
+              veículo,
+              <strong>trabalhamos exclusivamente com horário marcado</strong>.
+              Agende sua visita rapidamente pelo nosso WhatsApp.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div
+            class="bg-brand-gray/30 border border-white/10 rounded-lg overflow-hidden"
+          >
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
+              onclick="toggleFaq(this)"
+            >
+              <span class="font-bold text-gray-200"
+                >Quais formas de pagamento vocês aceitam?</span
+              >
+              <i
+                class="ph-bold ph-caret-down text-brand-red transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-2"
+            >
+              Aceitamos cartões de crédito, débito e PIX. Parcelamos serviços
+              maiores para facilitar a manutenção do seu veículo sem pesar no
+              bolso.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="relative py-24 bg-brand-red overflow-hidden">
+      <div
+        class="absolute inset-0 opacity-10"
+        style="
+          background-image: radial-gradient(#000 1px, transparent 1px);
+          background-size: 20px 20px;
+        "
+      ></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 text-center reveal">
+        <h2
+          class="text-3xl md:text-5xl font-display font-black text-white mb-6"
+        >
+          Priorize a segurança do seu veículo
+        </h2>
+        <p class="text-white/90 text-lg mb-10">
+          Não espere o imprevisto acontecer. Conte com quem tem 8 anos de
+          experiência em engenharia automotiva.
+        </p>
+
+        <div
+          class="bg-white rounded-2xl shadow-2xl overflow-hidden text-brand-black text-left grid md:grid-cols-2"
+        >
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold mb-6">AUTOCAR BS - Tatuí</h3>
+            <ul class="space-y-6 mb-8">
+              <li class="flex items-start gap-4">
+                <div class="bg-brand-red/10 p-2 rounded-lg text-brand-red">
+                  <i class="ph-fill ph-map-pin text-2xl"></i>
+                </div>
+                <div>
+                  <span class="block font-bold text-gray-800">Endereço</span
+                  ><span class="text-gray-600"
+                    >Rua 15 de Novembro, 2569<br />Centro, Tatuí - SP</span
+                  >
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="bg-brand-red/10 p-2 rounded-lg text-brand-red">
+                  <i class="ph-fill ph-phone text-2xl"></i>
+                </div>
+                <div>
+                  <span class="block font-bold text-gray-800"
+                    >Telefone / WhatsApp</span
+                  ><span class="text-gray-600">(15) 99666-1359</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="bg-brand-red/10 p-2 rounded-lg text-brand-red">
+                  <i class="ph-fill ph-clock text-2xl"></i>
+                </div>
+                <div>
+                  <span class="block font-bold text-gray-800">Horário</span>
+                  <span class="text-gray-600"
+                    >Seg - Sex: 07:00 às 11:30<br />e das 13:30 às 18:00</span
+                  >
+                </div>
+              </li>
+            </ul>
+            <a
+              href="https://wa.me/5515996661359?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o."
+              target="_blank"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg text-center flex items-center justify-center gap-3 transition-all hover:shadow-lg hover:-translate-y-1"
+            >
+              <i class="ph-bold ph-whatsapp-logo text-2xl"></i> Agendar via
+              WhatsApp
+            </a>
+          </div>
+          <div class="h-80 md:h-auto w-full bg-gray-200 relative">
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rua%2015%20de%20Novembro,%202569,%20Tatu%C3%AD%20-%20SP+(AUTOCAR%20BS)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="100%"
+              height="100%"
+              style="border: 0; filter: grayscale(100%)"
+              allowfullscreen=""
+              loading="lazy"
+              class="absolute inset-0 w-full h-full"
+              title="Localização Autocar BS"
+            ></iframe>
+            <a
+              href="https://maps.google.com/maps?q=Rua+15+de+Novembro,+2569,+Tatu%C3%AD+-+SP"
+              target="_blank"
+              class="absolute bottom-4 right-4 bg-white text-xs font-bold px-3 py-1 rounded shadow text-gray-800 hover:bg-gray-100 transition-colors z-10 flex items-center gap-1"
+            >
+              <i class="ph-bold ph-arrow-square-out"></i> Abrir no Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black border-t border-white/10 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="col-span-1 md:col-span-2">
+            <div
+              class="flex items-baseline italic font-display font-black tracking-tighter text-2xl mb-4"
+            >
+              <span class="text-white mr-1">AUTOCAR</span
+              ><span class="text-brand-red">BS</span>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+              Excelência em reparação automotiva em Tatuí. 8 anos comprometidos
+              com a qualidade técnica.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>
+                <a
+                  href="#especialidade"
+                  class="hover:text-brand-red transition-colors"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#servicos"
+                  class="hover:text-brand-red transition-colors"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contato"
+                  class="hover:text-brand-red transition-colors"
+                  >Agendamento</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4">Conecte-se</h4>
+            <div class="flex gap-4">
+              <!-- Link do Instagram Atualizado -->
+              <a
+                href="https://www.instagram.com/auto.carbs"
+                target="_blank"
+                class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all"
+              >
+                <i class="ph-fill ph-instagram-logo text-xl"></i>
+              </a>
+              <!-- Facebook (mantive genérico por enquanto) -->
+              <a
+                href="#"
+                class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand-red hover:text-white transition-all"
+              >
+                <i class="ph-fill ph-facebook-logo text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-gray-600 text-xs text-center md:text-left">
+            &copy; <span id="year"></span> AUTOCAR BS. Todos os direitos
+            reservados.
+          </p>
+          <p class="text-gray-700 text-xs">Engenharia e Performance.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botão Flutuante -->
+    <a
+      href="https://wa.me/5515996661359?text=Ol%C3%A1%2C%20vim%20pelo%20site%21"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center justify-center animate-bounce-slow"
+      aria-label="Falar no WhatsApp"
+    >
+      <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-lg");
+        } else {
+          navbar.classList.remove("shadow-lg");
+        }
+      });
+
+      function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector("i");
+        content.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const revealOnScroll = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        reveals.forEach((reveal) => revealOnScroll.observe(reveal));
+      });
+    </script>
+  </body>
+</html>
