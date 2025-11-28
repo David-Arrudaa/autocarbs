@@ -143,10 +143,15 @@
     <nav class="fixed w-full z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 transition-all duration-300 h-20 shadow-lg" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div class="flex items-center justify-between h-full">
-                <!-- Logo (IMAGEM) -->
+                <!-- Logo (TEXTO/CSS) -->
                 <div class="flex-shrink-0 flex items-center gap-1 cursor-pointer">
-                    <!-- Aumentei o tamanho do logo aqui (h-12 md:h-14) -->
-                    <img src="./logo.png" alt="Autocar BS Logo" class="h-12 md:h-14 w-auto object-contain">
+                    <div class="flex flex-col leading-none">
+                        <div class="flex items-baseline italic font-display font-black tracking-tighter text-3xl">
+                            <span class="text-white mr-1">AUTOCAR</span>
+                            <span class="text-brand-red">BS</span>
+                        </div>
+                        <div class="h-0.5 w-full bg-white mt-0.5 rounded-full"></div>
+                    </div>
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -571,9 +576,8 @@
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="md:col-span-1">
                     <!-- Logo no Footer -->
-                    <div class="flex items-center gap-2 mb-4">
-                        <!-- Aumentei o tamanho do logo aqui (h-10) -->
-                        <img src="./logo.png" alt="Autocar BS" class="h-10 w-auto object-contain">
+                    <div class="flex items-baseline italic font-display font-black tracking-tighter text-2xl mb-4">
+                        <span class="text-white mr-1">AUTOCAR</span><span class="text-brand-red">BS</span>
                     </div>
                     <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Excelência em reparação automotiva em Tatuí. 8 anos comprometidos com a qualidade técnica.</p>
                 </div>
