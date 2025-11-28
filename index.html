@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadados -->
     <meta name="description" content="Oficina Mecânica Especializada em VW e Audi em Tatuí-SP. 8 anos de experiência, diagnóstico avançado, revisão e manutenção para nacionais e importados.">
     <meta name="keywords" content="mecânica tatuí, oficina vw audi, autocar bs, revisão, manutenção importados, câmbio dsg, motor tsi">
     <meta name="author" content="AUTOCAR BS">
-    <meta name="theme-color" content="#18181b"> <!-- Cinza Premium -->
+    <meta name="theme-color" content="#0f0f0f"> <!-- Preto Absoluto -->
     
-    <!-- Favicon -->
+    <!-- URL Canônica -->
+    <link rel="canonical" href="https://www.autocarbstatui.com.br/">
+
+    <!-- Favicon (Emoji de Ferramenta) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph / Compartilhamento Social -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.autocarbstatui.com.br/">
     <meta property="og:title" content="AUTOCAR BS | Especialista VW e Audi em Tatuí">
     <meta property="og:description" content="Sua máquina merece expertise real. Diagnóstico e manutenção de alta performance.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200">
     
-    <title>AUTOCAR BS | Especialista VW e Audi</title>
-
-    <!-- DICA DEV: Cole seu código do Google Analytics (G-XXXXXXXX) aqui futuramente -->
+    <title>AUTOCAR BS | Especialista VW e Audi em Tatuí</title>
     
-    <!-- JSON-LD SEO Schema -->
+    <!-- JSON-LD SEO Schema (Google) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AutoRepair",
       "name": "AUTOCAR BS",
       "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e",
+      "url": "https://www.autocarbstatui.com.br",
       "description": "Oficina mecânica especializada em VW e Audi, atendendo também nacionais e importados com diagnóstico avançado.",
       "address": {
         "@type": "PostalAddress",
@@ -36,6 +41,11 @@
         "addressRegion": "SP",
         "postalCode": "18270-000",
         "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.3561", 
+        "longitude": "-47.8497" 
       },
       "telephone": "+5515996661359",
       "openingHoursSpecification": [
@@ -56,20 +66,20 @@
     }
     </script>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (Estilização Rápida) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração de Cores -->
+    <!-- Configuração de Cores Personalizadas -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            black: '#18181b', /* Cinza Escuro Premium */
-                            red: '#E31E24',
+                            black: '#0f0f0f', /* Preto Absoluto (Fundo Principal) */
+                            red: '#E31E24',   /* Vermelho da Marca */
                             darkred: '#b91c1c',
-                            gray: '#27272a'
+                            gray: '#1a1a1a'   /* Cinza Escuro (Cards) */
                         }
                     },
                     fontFamily: {
@@ -98,8 +108,13 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <style>
+        /* Ajustes Globais */
         html { scroll-padding-top: 6rem; }
+        
+        /* Corte Diagonal na Hero Section */
         .clip-path-hero { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+        
+        /* Filtro para deixar logos brancos */
         .logo-filter {
             filter: brightness(0) invert(1);
             opacity: 0.6;
@@ -109,6 +124,8 @@
             opacity: 1;
             filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255,255,255,0.5));
         }
+
+        /* Animação de Scroll (Reveal) */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -122,19 +139,14 @@
 </head>
 <body class="bg-brand-black text-gray-100 font-sans antialiased relative">
 
-    <!-- Navbar -->
+    <!-- Navbar Fixa -->
     <nav class="fixed w-full z-50 bg-brand-black/95 backdrop-blur-sm border-b border-white/10 transition-all duration-300 h-20 shadow-lg" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div class="flex items-center justify-between h-full">
-                <!-- Logo -->
+                <!-- Logo (IMAGEM) -->
                 <div class="flex-shrink-0 flex items-center gap-1 cursor-pointer">
-                    <div class="flex flex-col leading-none">
-                        <div class="flex items-baseline italic font-display font-black tracking-tighter text-3xl">
-                            <span class="text-white mr-1">AUTOCAR</span>
-                            <span class="text-brand-red">BS</span>
-                        </div>
-                        <div class="h-0.5 w-full bg-white mt-0.5 rounded-full"></div>
-                    </div>
+                    <!-- Link aponta para o arquivo na mesma pasta -->
+                    <img src="./logo.png" alt="Autocar BS Logo" class="h-10 w-auto object-contain">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -146,7 +158,7 @@
                         <a href="#dicas" class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium">Dicas</a>
                         <a href="#depoimentos" class="hover:text-brand-red transition-colors px-3 py-2 rounded-md text-sm font-medium">Depoimentos</a>
                         
-                        <!-- Botão Nav Ghost -->
+                        <!-- Botão Nav "Ghost" -->
                         <a href="#contato" class="border border-brand-red text-brand-red hover:bg-brand-red hover:text-white transition-all duration-300 px-6 py-2 rounded text-sm font-bold uppercase tracking-wider">
                             Agendar
                         </a>
@@ -162,7 +174,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu (Dropdown) -->
         <div class="hidden md:hidden bg-brand-gray border-b border-white/10 shadow-2xl" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Início</a>
@@ -175,9 +187,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Topo) -->
     <section id="home" class="relative min-h-[85vh] flex flex-col justify-center pt-32 pb-12 overflow-hidden clip-path-hero">
-        <!-- Background -->
+        <!-- Background com Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop" alt="Motor Audi Performance" class="w-full h-full object-cover opacity-60">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent"></div>
@@ -201,7 +213,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Link direto para o WhatsApp -->
+                    <!-- Link direto para o WhatsApp (Padronizado) -->
                     <a href="https://wa.me/5515996661359?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Autocar%20BS%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" class="flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-darkred text-white px-8 py-4 rounded font-bold text-lg transition-all hover:-translate-y-1 shadow-lg shadow-brand-red/20">
                         <i class="ph-bold ph-whatsapp-logo"></i>
                         Orçamento Rápido
@@ -214,7 +226,7 @@
         </div>
     </section>
 
-    <!-- Trust Bar -->
+    <!-- Trust Bar (Logos) -->
     <section class="py-12 border-b border-white/5 bg-brand-gray/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <p class="text-center text-gray-500 text-sm font-semibold uppercase tracking-widest mb-8">Expertise Técnica Comprovada</p>
@@ -230,7 +242,7 @@
         </div>
     </section>
 
-    <!-- Especialidade -->
+    <!-- Especialidade (Sua Foto) -->
     <section id="especialidade" class="py-24 bg-brand-black relative">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-red/5 to-transparent pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,6 +251,7 @@
                     <div class="absolute -inset-4 bg-brand-red/20 rounded-xl blur-lg group-hover:bg-brand-red/30 transition-all duration-500"></div>
                     
                     <!-- FOTO DO ESPECIALISTA -->
+                    <!-- Link aponta para o arquivo na mesma pasta -->
                     <img src="./especialista.jpg" 
                          loading="lazy"
                          onerror="this.src='https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1000&auto=format&fit=crop'"
@@ -552,13 +565,14 @@
         </div>
     </section>
 
-    <!-- Footer (LIMPO - SEM BANDEIRAS) -->
+    <!-- Footer -->
     <footer class="bg-brand-black border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="md:col-span-1">
-                    <div class="flex items-baseline italic font-display font-black tracking-tighter text-2xl mb-4">
-                        <span class="text-white mr-1">AUTOCAR</span><span class="text-brand-red">BS</span>
+                    <!-- Logo no Footer -->
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="./logo.png" alt="Autocar BS" class="h-8 w-auto object-contain">
                     </div>
                     <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Excelência em reparação automotiva em Tatuí. 8 anos comprometidos com a qualidade técnica.</p>
                 </div>
